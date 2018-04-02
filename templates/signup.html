@@ -5,22 +5,29 @@
 	<h1>{{title}}</h1>
 	
 	<form action="/validate" method='POST'>
-			<label>Username
-				<input name="username" type="text" value='{{username}}' />
-			</label>
-			<p class="error">{{username_error}}</p>
-			<label>Password
-				<input name="password" type="password" value='{{password}}' />
-			</label>
-			<p class="error">{{password_error}}</p>
-			<label>Verify Password
-				<input name="vpassword" type="password" value='{{vpassword}}' />
-			</label>
-			<p></p>
-			<label>Email (optional)
-				<input name="email" type="text" value='{{email}}' />
-			</label>
-			<p class="error">{{email_error}}</p>
+			<div>
+				<label>Username
+					<input name="username" type="text" value='{{username}}' />
+				</label>
+				<span class="error">{{username_error}}</span>
+			</div><br>
+			<div>
+				<label>Password
+					<input name="password" type="password" value='{{password}}' />
+				</label>
+				<span class="error">{{password_error}}</span>
+			</div><br>
+			<div>
+				<label>Verify Password
+					<input name="vpassword" type="password" value='{{vpassword}}' />
+				</label>
+			</div><br>
+			<div>
+				<label>Email (optional)
+					<input name="email" type="text" value='{{email}}' />
+				</label>
+				<span class="error">{{email_error}}</span>
+			</div><br>
 			<input type="submit" value="Submit Query">
 		</form>
 

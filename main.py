@@ -54,9 +54,15 @@ def validate():
 	##may be empty, but if filled must contain @ and 1 '.'
 	if email != '':
 		if '@' not in email:
-			email_error = "Please enter a proper E-mail address."
+			email_error = "Please enter a proper E-mail address. (Including both an '@' and a '.')"
 		elif '.' not in email:
-			email_error = "Please enter a proper E-mail address."
+			email_error = "Please enter a proper E-mail address. (Including both an '@' and a '.')"
+		elif len(email) < 3:
+			email_error = "Please enter a proper E-mail address. (Between 3 and 20 characters)"
+		elif len(email) > 20:
+			email_error = "Please enter a proper E-mail address. (Between 3 and 20 characters)"
+		elif ' ' in email:
+			email_error = "Please enter a proper E-mail address. (No spaces)"
 		
 	#return render_template('welcome.html', username=username, password=password, vpassword=vpassword, email=email)
 
